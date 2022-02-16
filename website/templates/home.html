@@ -1,5 +1,43 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1> This is the Home Page</h1>
+<h1> Welcome! Find the Cheapest Medication for your Symptoms!</h1>
+
+<div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+          <img src="/static/PatientOne.jpg" alt="Itachi" style="width:100%">
+          <div class="caption">
+            <p>"Thanks to this app I was able to find a quick treatment for my bloody coughs"</p>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+          <img src="/static/PatientTwo.jpg" alt="Neji" style="width:100%">
+          <div class="caption">
+            <p>"This app helped me with finding the cheapest treatment to my dry eyes"</p>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+          <img src="/static/PatientThree.jpg" alt="Naruto" style="width:100%">
+          <div class="caption">
+            <p>"I loved everything about this app this app gave me what I needed for the stomach ach I've been having"</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class = "row">
+      Find the cheapest medication, Don't spend too much on treatments! Lets Get Started!
+  </div>
+  <div class = "row">
+    <a href = "symptoms">
+        Lets Get Started!
+    </a>
+  </div>
+
+
 {% endblock %}

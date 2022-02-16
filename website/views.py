@@ -16,6 +16,11 @@ def symptoms():
 def medication():
     return render_template("medication.html")
 
+@views.route('/guide')
+def guide():
+    return render_template("guide.html")
+
+
 
 
 
