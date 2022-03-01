@@ -2,6 +2,14 @@
 
 {% block content %}
 <h1> This is the Medication Page</h1>
+<form action="/medication" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Want to see the price of Medication?</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="medication" name="med">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
 <table class="table">
     <thead>
       <tr>
