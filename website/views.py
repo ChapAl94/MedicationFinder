@@ -1,6 +1,19 @@
 #stores routes not relating to authenication whre user can naviagte too
 
 from flask import Blueprint, render_template, request
+from flask_sqlalchemy import SQLAlchemy
+
+# app = Flask(__name__)
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.sqlite3'
+# app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+# db = SQLAlchemy(app)
+
+# class medication(db.Model):
+#     _id = db.Column("id", db.Integer, primary_key=True)
+#     name = db.Column("name", db.String(100))
+#     symptom = db.Column("symptom", db.String(100))
+
 
 views = Blueprint('views', __name__)
 
