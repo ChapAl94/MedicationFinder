@@ -10,7 +10,11 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-<table class="table">
+<h3>
+  <a href = "newMed">Add Medication</a>
+</h3>
+
+<table class="table" method="POST">
     <thead>
       <tr>
         <th scope="col">Name Brand</th>
@@ -20,6 +24,7 @@
       </tr>
     </thead>
     <tbody>
+      {% for meds in medicationBrand %}
       <tr>
         <td>Tynenol</td>
         <td>Headaches, Fevers, Pain</td>
@@ -27,12 +32,13 @@
         <td>$25.99</td>
       </tr>
       <tr>
-        <td>Benadryl</td>
-        <td>Allergies, Runny Nose</td>
-        <td>Lowell, MA</td>
-        <td>$20.99</td>
+        <td>{{meds.medicationName}}</td>
+        <td>{{meds.symptoms}}</td>
+        <td>{{meds.location}}</td>
+        <td>{{meds.cost}}</td>
       </tr>
-      <tr>
+      {% endfor %}
+      <!-- <tr>
         <td>Ibuprofen</td>
         <td>Headaches, Fevers, Pain</td>
         <td>Cambridge, MA</td>
@@ -43,7 +49,7 @@
         <td>Headaches, Fevers, Pain</td>
         <td>Somerville, MA</td>
         <td>$18.99</td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>
 {% endblock %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <body>
+   
+      <h3>Medication New to Add</h3>
+
+    
+      <form action = "{{ request.path }}" method = "POST">
+         <label for = "name">Name Brand</label><br>
+         <input type = "text" name = "name" placeholder = "Name" /><br>
+         <label for = "treatment">Treatment</label><br>
+         <input type = "text" name = "treatment" placeholder = "treatment" /><br>
+         <label for = "storeLocation">Store Location</label><br>
+         <textarea name = "storeLocation" placeholder = "Store Location"></textarea><br>
+         <label for = "price">Price</label><br>
+         <input type = "text" name = "cost" placeholder = "Cost" /><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+      
+   </body>
+</html>

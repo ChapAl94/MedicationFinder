@@ -1,19 +1,18 @@
 from . import db 
-from sqlalchemy.orm import sessionmaker
-
-session = sessionmaker(bind=engine)()
 
 
-class medication(db.Model):
+class medicationBrand(db.Model):
     id = db.Column("id", db.Integer, primary_key=True)
     medicationName = db.Column(db.String(100))
     symptom = db.Column(db.String(100))
     location = db.Column(db.String(100))
+    cost = db.Column(db.String(100))
 
-    # def __init__(self, medicationName, symptom, location):
-    #     self.medicationName = medicationName
-    #     self.symptom = symptom
-    #     self.location = location
+    def __init__(self, medicationName, symptom, location, cost):
+        self.medicationName = medicationName
+        self.symptom = symptom
+        self.location = location
+        self.cost = cost
 
 # meds1 = medication("Tynenol", "pain, headache, fever", "Walgreens, Somerville, MA")
 # meds2 = medication("Advil", "pain, headache, fever", "CVS, Lowell, MA")

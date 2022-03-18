@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from os import path
 
 
+
 # app = Flask(__name__)
 
 
@@ -24,7 +25,7 @@ def create_app():
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
 
-    from .models import medication
+    from .models import medicationBrand
     create_database(app)
 
     return app
