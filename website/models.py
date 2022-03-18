@@ -1,5 +1,7 @@
 from . import db 
+from sqlalchemy.orm import sessionmaker
 
+session = sessionmaker(bind=engine)()
 
 
 class medication(db.Model):
@@ -12,3 +14,20 @@ class medication(db.Model):
     #     self.medicationName = medicationName
     #     self.symptom = symptom
     #     self.location = location
+
+meds1 = medication("Tynenol", "pain, headache, fever", "Walgreens, Somerville, MA")
+meds2 = medication("Advil", "pain, headache, fever", "CVS, Lowell, MA")
+meds3 = medication("Zyrtec", "allergies", "Walmart, Cambridge, MA")
+meds4 = medication("Benadryl", "allergies", "Walgreens, Somerville, MA")
+meds5 = medication("Pepto Bismol", "stomach ache, diahrea", "Walgreens, Boston, MA")
+meds6 = medication("Alieve", "pain, headache, fever", "Walgreens, Somerville, MA")
+meds7 = medication("Tynenol", "pain, headache, fever", "Walgreens, Somerville, MA")
+
+session.add(meds1)
+session.add(meds2)
+session.add(meds3)
+session.add(meds4)
+session.add(meds5)
+session.add(meds6)
+session.add(meds7)
+session.commit()
