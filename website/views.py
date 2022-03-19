@@ -3,6 +3,7 @@
 from flask import Blueprint, render_template, request, flash, url_for, redirect
 from .models import medicationBrand
 from . import db
+import time
 # app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.sqlite3'
 # app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -47,7 +48,12 @@ def medication():
         medTitle = request.form['med']
         with open('medicationPrice.txt','w') as f:
             f.write(medTitle)
-            
+        
+        time.sleep(10)
+
+        with open('medicationPrice.txt','r') as f:
+            priceMed = f.read()
+            return priceMed
     return render_template("medication.html")
 
 @views.route('/guide')
