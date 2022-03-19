@@ -14,11 +14,5 @@ class medicationBrand(db.Model):
         self.location = location
         self.cost = cost
 
-# meds1 = medication("Tynenol", "pain, headache, fever", "Walgreens, Somerville, MA")
-# meds2 = medication("Advil", "pain, headache, fever", "CVS, Lowell, MA")
-# meds3 = medication("Zyrtec", "allergies", "Walmart, Cambridge, MA")
-# meds4 = medication("Benadryl", "allergies", "Walgreens, Somerville, MA")
-# meds5 = medication("Pepto Bismol", "stomach ache, diahrea", "Walgreens, Boston, MA")
-# meds6 = medication("Alieve", "pain, headache, fever", "Walgreens, Somerville, MA")
-# meds7 = medication("Tynenol", "pain, headache, fever", "Walgreens, Somerville, MA")
+
 
